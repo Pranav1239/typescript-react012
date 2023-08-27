@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Button1 from './components/Practice1'
+import StateBtn from './components/Practice2';
+import Input1 from './components/Practice3';
 
 function App() {
+  const TestAlert = ()=>{
+      alert("AlertCLicked")
+      console.log("AlertClicked");
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="container">
+    <Button1 onClick={TestAlert} text="Hello"/>
     </div>
-  );
+    <br />
+    <div className="container">
+    <StateBtn />
+      </div>
+      <br />
+      <div className="container">
+      <Input1/>
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App
